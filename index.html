@@ -1,18 +1,46 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Sum of two numbers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="media_querie.css" />
     </head>
     <body>
         <div class="container">
-            <h3 class="label" >Enter the first number</h3>
+            <h3 class="label">Enter the first number</h3>
             <input id="firstNumber" class="input_number" />
-            <h3 class="label" >Enter the second number</h3>
+            <h3 class="label">Enter the second number</h3>
             <input id="secondNumber" class="input_number" />
-            <button id="btnSum" class="btn_sum" >Sum</button>
-            <h3 id="result" class="label_result"></h3> 
+            <button id="btnSum">Sum</button>
+            <h3 id="result"></h3>
+        </div>
+
+        <div class="history">
+            <table>
+                <tr>
+                   <th>Sum</th> 
+                   <th>Result</th> 
+                </tr>
+                <tr>
+                    <td>1 + 4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>10 + 1</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>20 + 1</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>78 + 1</td>
+                    <td>79</td>
+                </tr>
+            </table>
         </div>
         <script src="script.js"></script>
-    </body> 
+    </body>
 </html>

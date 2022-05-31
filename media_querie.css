@@ -1,0 +1,9 @@
+@media (max-width: 760px) {
+    .container {
+        width: 90%;
+    }
+
+    .history {
+        width: 90%;
+    }
+}
