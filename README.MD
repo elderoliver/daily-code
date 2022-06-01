@@ -1,6 +1,6 @@
 # Mainly syntaxes used in the project
 
-## Allowing the use of media queries in the CSS file:
+## Allowing the use of media queries in the CSS file
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
@@ -19,4 +19,17 @@
 ## Creating a normal column
 ```
 <td>
+```
+
+## Adding rows in a table 
+```
+let row = myTable.insertRow(1);
+```
+## Adding columns in a row table
+```
+let colSum = row.insertCell(0);
+```
+## Writing something on the new column (example)
+```
+colSum.innerText = `${firstNumber.value} + ${secondNumber.value}`;
 ```
