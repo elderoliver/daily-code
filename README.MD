@@ -1,6 +1,6 @@
-# Maily syntaxes using in the project
+# Mainly syntaxes used in the project
 
-## Alowing use media queries in the css file:
+## Allowing the use of media queries in the CSS file:
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
