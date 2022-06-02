@@ -33,3 +33,17 @@ let colSum = row.insertCell(0);
 ```
 colSum.innerText = `${firstNumber.value} + ${secondNumber.value}`;
 ```
+
+## Creating a button dynamically
+```
+let btnClean = document.createElement('input');
+btnClean.type = 'button';
+btnClean.className = 'btnClean'; 
+btnClean.value = 'X'; 
+btnClean.setAttribute('onclick', 'alert("are you sure?")');
+```
+
+## Adding this button into a td
+```
+colClean.appendChild(btnClean); 
+```
