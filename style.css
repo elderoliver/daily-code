@@ -26,6 +26,11 @@ body {
     background-color: yellow;
 }
 
+#btnSum:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
 #result {
     background-color: dimgray;
     color: yellow;
@@ -45,4 +50,18 @@ table {
 
 td {
     text-align: center;
+}
+
+.btnClean {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    width: 50%;
+}
+
+.btnClean:hover {
+    background-color: white;
+    color: red;
+    border-radius: 3px;
 }
