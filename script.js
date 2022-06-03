@@ -37,6 +37,7 @@ function createTableButton(rowIdDelete) {
     btnClean.type = 'button';
     btnClean.className = 'btnClean'; 
     btnClean.value = 'X'; 
+    const idRow = rowIdDelete.getAttribute("id");
     btnClean.setAttribute('onclick', 'deleteRow("'+idRow+'")');
     return btnClean;
 }
