@@ -47,3 +47,14 @@ btnClean.setAttribute('onclick', 'alert("are you sure?")');
 ```
 colClean.appendChild(btnClean); 
 ```
+
+## Get a array of elements
+```
+myTable.getElementsByTagName("tr");
+```
+
+## Get and Set an attribute 
+```
+row.setAttribute("id",`row${rowId}`);
+const idRow = rowIdDelete.getAttribute("id");
+```
