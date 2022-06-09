@@ -59,3 +59,20 @@ td {
     color: red;
     border-radius: 3px;
 }
+
+.footer {
+    position: fixed;
+    height: 5%;
+    bottom: 0;
+    width: 100%;
+    background-color: #4BAB3C;
+}
+
+.footer__detail {
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+}
