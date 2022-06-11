@@ -1,7 +1,7 @@
 function insertRowOnTable(myTable,number1,number2) {
     let row = myTable.insertRow(1);
     
-    const rowId = myTable.getElementsByTagName("tr").length; 
+    const rowId = getNumberOfRows(); 
     row.setAttribute("id",`row${rowId}`);
 
     let colSum = row.insertCell(0);
@@ -13,6 +13,8 @@ function insertRowOnTable(myTable,number1,number2) {
     colSum.innerText = `${firstNumber.value} + ${secondNumber.value}`;
     colResult.innerText = `${number1 + number2}`; 
     colClean.appendChild(btnClean); 
+
+    sumAllItems();
 }
 
 function createTableButton(rowIdDelete) {
@@ -32,4 +34,18 @@ function cleanFields(){
 
 function deleteRow(rowIdDelete) {
     document.getElementById(rowIdDelete).remove(); 
+    sumAllItems();
 };
+
+function sumAllItems() {
+    const numOfRows = getNumberOfRows(); 
+    let sum = 0.0;
+    for(let i = 1;i < numOfRows; i++){
+        sum = sum + parseFloat(myTable.rows[i].cells.item(1).innerText); 
+    }
+    finalSum.innerText = `Total: ${sum}`;
+}
+
+function getNumberOfRows(){
+    return myTable.getElementsByTagName("tr").length;
+}

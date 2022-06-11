@@ -1,8 +1,8 @@
 const firstNumber = document.getElementById("firstNumber");
 const secondNumber = document.getElementById("secondNumber");
 const btnSum = document.getElementById("btnSum");
-const deleteRowTest = document.getElementById("deleteRowTest");
 const myTable = document.getElementById("myTable");
+const finalSum = document.getElementById("finalSum");
 
 btnSum.addEventListener("click", () => {
     const number1 = parseFloat(firstNumber.value);
