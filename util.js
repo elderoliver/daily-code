@@ -46,10 +46,8 @@ function sumAllItems() {
 }
 
 function isNumber(value){
-
     if (isNaN(value)){
         return false;
     }
-
     return typeof value == 'number';
 }
