@@ -1,7 +1,7 @@
 function insertRowOnTable(myTable,number1,number2) {
     let row = myTable.insertRow(1);
     
-    const rowId = getNumberOfRows(); 
+    const rowId = myTable.rows.length; 
     row.setAttribute("id",`row${rowId}`);
 
     let colSum = row.insertCell(0);
@@ -38,14 +38,18 @@ function deleteRow(rowIdDelete) {
 };
 
 function sumAllItems() {
-    const numOfRows = getNumberOfRows(); 
     let sum = 0.0;
-    for(let i = 1;i < numOfRows; i++){
+    for(let i = 1;i < myTable.rows.length; i++){
         sum = sum + parseFloat(myTable.rows[i].cells.item(1).innerText); 
     }
     finalSum.innerText = `Total: ${sum}`;
 }
 
-function getNumberOfRows(){
-    return myTable.getElementsByTagName("tr").length;
+function isNumber(value){
+
+    if (isNaN(value)){
+        return false;
+    }
+
+    return typeof value == 'number';
 }
