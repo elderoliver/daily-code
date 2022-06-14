@@ -58,3 +58,21 @@ myTable.getElementsByTagName("tr");
 row.setAttribute("id",`row${rowId}`);
 const idRow = rowIdDelete.getAttribute("id");
 ```
+
+## how to put a div in the bottom of the viewport
+```
+    .footer {
+        position: fixed;
+        height: 5%;
+        bottom: 0;
+        width: 100%;
+        background-color: #4BAB3C;
+    }
+```
+
+## how to get the number of lines from a table and access the cell content in the table
+```
+    for(let i = 1;i < myTable.rows.length; i++){
+        sum = sum + parseFloat(myTable.rows[i].cells.item(1).innerText); 
+    }
+```

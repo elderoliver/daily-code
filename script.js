@@ -5,8 +5,18 @@ const myTable = document.getElementById("myTable");
 const finalSum = document.getElementById("finalSum");
 
 btnSum.addEventListener("click", () => {
-    const number1 = parseFloat(firstNumber.value);
-    const number2 = parseFloat(secondNumber.value);
-    insertRowOnTable(myTable,number1,number2); 
-    cleanFields();
+    try {
+        const number1 = parseFloat(firstNumber.value);
+        const number2 = parseFloat(secondNumber.value);
+        
+        if (isNumber(number1) && isNumber(number2)){
+            insertRowOnTable(myTable,number1,number2); 
+        } else {
+            alert('Please insert two valid numbers!');
+        }
+        
+        cleanFields();
+    } catch (error) {
+        alert(`Error: ${error}`);
+    }
 });

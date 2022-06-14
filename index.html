@@ -10,10 +10,10 @@
     <body>
         <div class="container">
             <h3 class="label">Enter the first number</h3>
-            <input id="firstNumber" class="input_number" />
+            <input id="firstNumber" type="number" class="input_number" />
             <h3 class="label">Enter the second number</h3>
-            <input id="secondNumber" class="input_number" />
-            <button id="btnSum">Sum</button>
+            <input id="secondNumber" type="number" class="input_number" />
+            <button class="btn_sum" id="btnSum">Sum</button>
         </div>
 
         <div class="history">
@@ -24,10 +24,23 @@
                 </tr>
             </table>
         </div>
+        
         <div class="footer">
             <div class="footer__detail" id="finalSum">
                 Total: 00,00
             </div>
+        </div>
+
+
+        <div class="box_edit_item">
+            <div class="box_edit_item__container">
+                <h3 class="label">Edit the first number</h3>
+                <input id="number1Edit" type = "number" class="input_number" />
+                <h3 class="label">Edit the first number</h3>
+                <input id="number2Edit" type="number" class="input_number" />
+                <button id="bthSaveEdit" class="btn_sum">Save</button>
+            </div>
+
         </div>
 
         <script src="util.js"></script>
