@@ -6,30 +6,48 @@ function insertRowOnTable(myTable,number1,number2) {
 
     let colSum = row.insertCell(0);
     let colResult = row.insertCell(1);
-    let colClean = row.insertCell(2); 
+    let colEdit = row.insertCell(2); 
+    let colClean = row.insertCell(3); 
     
-    let btnClean = createTableButton(row); 
+    let btnEdit = createTableButton(row,'edit');
+    let btnClean = createTableButton(row,'delete'); 
 
     colSum.innerText = `${firstNumber.value} + ${secondNumber.value}`;
-    colResult.innerText = `${number1 + number2}`; 
+    colResult.innerText = `${number1 + number2}`;
+    colEdit.appendChild(btnEdit); 
     colClean.appendChild(btnClean); 
 
     sumAllItems();
 }
 
-function createTableButton(rowIdDelete) {
+function createTableButton(rowId, operation) {
     let btnClean = document.createElement('input');
     btnClean.type = 'button';
     btnClean.className = 'btnClean'; 
-    btnClean.value = 'X'; 
-    const idRow = rowIdDelete.getAttribute("id");
-    btnClean.setAttribute('onclick', 'deleteRow("'+idRow+'")');
+    
+    const idRow = rowId.getAttribute("id");
+    if (operation === 'delete'){
+        btnClean.value = 'X'; 
+        btnClean.setAttribute('onclick', 'deleteRow("'+idRow+'")');
+    } else if (operation === 'edit'){
+        btnClean.value = 'edit'; 
+        btnClean.setAttribute('onclick', 'editRow("'+idRow+'")');
+    }
+    
     return btnClean;
 }
 
 function cleanFields(){
     firstNumber.value = "";
     secondNumber.value = "";
+}
+
+function editRow(rowIdEdit){
+    const boxEdit = document.getElementsByClassName("box_edit_item")[0];
+    boxEdit.setAttribute("id", rowIdEdit);
+
+    const element = document.querySelector('.box_edit_item');
+    element.style.setProperty('visibility', 'visible');
 }
 
 function deleteRow(rowIdDelete) {
