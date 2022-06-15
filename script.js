@@ -4,6 +4,9 @@ const btnSum = document.getElementById("btnSum");
 const myTable = document.getElementById("myTable");
 const finalSum = document.getElementById("finalSum");
 
+const btnSaveEdit = document.getElementById("btnSaveEdit");
+
+
 btnSum.addEventListener("click", () => {
     try {
         const number1 = parseFloat(firstNumber.value);
@@ -19,4 +22,9 @@ btnSum.addEventListener("click", () => {
     } catch (error) {
         alert(`Error: ${error}`);
     }
+});
+
+btnSaveEdit.addEventListener("click", () => {
+    const element = document.querySelector('.box_edit_item');
+    element.style.setProperty('visibility', 'hidden');
 });
