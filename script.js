@@ -4,7 +4,10 @@ const btnSum = document.getElementById("btnSum");
 const myTable = document.getElementById("myTable");
 const finalSum = document.getElementById("finalSum");
 
+const number1Edit = document.getElementById("number1Edit");
+const number2Edit = document.getElementById("number2Edit");
 const btnSaveEdit = document.getElementById("btnSaveEdit");
+
 
 
 btnSum.addEventListener("click", () => {
