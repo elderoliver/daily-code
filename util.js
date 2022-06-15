@@ -48,6 +48,11 @@ function editRow(rowIdEdit){
 
     const element = document.querySelector('.box_edit_item');
     element.style.setProperty('visibility', 'visible');
+
+    const sumString = myTable.rows[rowIdEdit].cells.item(0).innerText;
+
+    number1Edit.value = sumString.split("+")[0].trim();
+    number2Edit.value = sumString.split("+")[1].trim();
 }
 
 function deleteRow(rowIdDelete) {
