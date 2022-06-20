@@ -8,6 +8,10 @@ const number1Edit = document.getElementById("number1Edit");
 const number2Edit = document.getElementById("number2Edit");
 const btnSaveEdit = document.getElementById("btnSaveEdit");
 
+const boxEdit = document.getElementsByClassName("box_edit_item")[0];
+
+const editBox = document.querySelector('.box_edit_item');
+
 
 
 btnSum.addEventListener("click", () => {
@@ -28,6 +32,21 @@ btnSum.addEventListener("click", () => {
 });
 
 btnSaveEdit.addEventListener("click", () => {
-    const element = document.querySelector('.box_edit_item');
-    element.style.setProperty('visibility', 'hidden');
+    try {
+        const number1 = parseFloat(number1Edit.value)
+        const number2 = parseFloat(number2Edit.value);
+
+        if (isNumber(number1) && isNumber(number2)){
+            editBox.style.setProperty('visibility', 'hidden');
+            const idItem = boxEdit.getAttribute("id");
+            const currentRow = document.getElementById(idItem);
+            currentRow.cells.item(0).innerText = `${number1} + ${number2}`;
+            currentRow.cells.item(1).innerText = number1 + number2; 
+            sumAllItems();
+        } else {
+            alert('Please insert two valid numbers!');
+        }
+    } catch(error){
+        alert(`Error: ${error}`);
+    }
 });
