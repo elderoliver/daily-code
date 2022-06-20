@@ -43,7 +43,7 @@ function cleanFields(){
 }
 
 function editRow(rowIdEdit){
-    const boxEdit = document.getElementsByClassName("box_edit_item")[0];
+    
     boxEdit.setAttribute("id", rowIdEdit);
 
     const element = document.querySelector('.box_edit_item');
